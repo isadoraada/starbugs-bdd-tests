@@ -1,0 +1,28 @@
+#language: pt
+
+Funcionalidade: Catálogo de Cafés
+    Como um usuário do site,
+    Quero ver o catálogo de cafés na página principal
+    Para que eu possa escolher e saber mais sobre os cafés disponíveis
+
+Cenário: Acessar o catálogo de cafés na página principal
+    Quando acesso a página principal da Starbugs
+    Então devo ser uma lista de cafés disponíveis
+
+@temp
+Cenário: Iniciar a compra de um café
+    Dado que estou na página principal da Starbugs
+        E que desejo comprar o café "Expresso Gelado"
+        E que esse produto custa R$ 9.99
+        E que o custo de entrega desse item é de R$ 10.
+    Quando inicio a compra desse item 
+    Então devo ver a página de checkout com os detalhes do produto
+        E o valor total do pedido deve ser R$ 19.99
+
+@temp
+Cenário: Café indisponível 
+    Dado que estou na página principal da Starbugs 
+        E que desejo comprar o café "Expresso Cremoso"
+        E que esse produto não está disponível
+    Quando tento iniciar a compra desse item
+    Então devo ver uma mensagem informando que o produto está indisponível
