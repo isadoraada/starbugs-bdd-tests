@@ -8,8 +8,7 @@ Esta atividade foi desenvolvida como parte do curso BDD Experience (por **Fernan
 - **Cucumber** – Framework BDD
 - **Capybara** – Automação de navegação
 - **Selenium WebDriver** – Driver para browsers
-- **SitePrism** – Page Object Model (se aplicável)
-- **RSpec** – (se usado para matchers e assertions)
+- **RSpec** – Ferramenta de testes para aplicações escritas em Ruby
 
 ## 🚀 Como Executar
 
