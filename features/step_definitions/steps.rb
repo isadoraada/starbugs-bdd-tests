@@ -32,7 +32,7 @@ Então('devo ver a página de checkout com os detalhes do produto') do
   productTitle = find('.item-details h1')
   expect(productTitle.text).to eq @productName
 
-  subPrice = find('.subtotal .subprice')
+  subPrice = find('.subtotal .sub-price')
   expect(subPrice.text).to eq @productPrice
 
   delivery = find('.delivery-price')
@@ -44,14 +44,7 @@ Então('o valor total do pedido deve ser {string}') do |totalPrice|
   expect(price.text).to eq totalPrice
 end
 
-Dado('que esse produto não está disponível') do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Quando('tento iniciar a compra desse item') do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Então('devo ver uma mensagem informando que o produto está indisponível') do
-  pending # Write code here that turns the phrase above into concrete actions
+  popup = find('.swal2-html-container')
+  expect(popup.text).to eq 'Produto indisponível'
 end

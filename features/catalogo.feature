@@ -9,7 +9,6 @@ Cenário: Acessar o catálogo de cafés na página principal
     Quando acesso a página principal da Starbugs
     Então devo ser uma lista de cafés disponíveis
 
-@temp
 Cenário: Iniciar a compra de um café
     Dado que estou na página principal da Starbugs
         E que desejo comprar o café "Expresso Gelado"
@@ -19,10 +18,8 @@ Cenário: Iniciar a compra de um café
     Então devo ver a página de checkout com os detalhes do produto
         E o valor total do pedido deve ser "R$ 19,99"
 
-# @temp
 Cenário: Café indisponível 
     Dado que estou na página principal da Starbugs 
         E que desejo comprar o café "Expresso Cremoso"
-        E que esse produto não está disponível
-    Quando tento iniciar a compra desse item
+    Quando inicio a compra desse item
     Então devo ver uma mensagem informando que o produto está indisponível
