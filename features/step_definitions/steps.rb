@@ -11,32 +11,24 @@ Dado('que estou na página principal da Starbugs') do
   visit 'https://starbugs.vercel.app/'
 end
 
-Dado('que desejo comprar o café {string}') do |productName|
-  @productName = productName
-end
-
-Dado('que esse produto custa {string}') do |productPrice|
-  @productPrice = productPrice
-end
-
-Dado('que o custo de entrega desse item é de {string}') do |deliveryPrice|
-  @deliveryPrice = deliveryPrice
+Dado('que desejo comprar o seguinte produto:') do |table|
+  @product = table.rows_hash
 end
 
 Quando('inicio a compra desse item') do
-  product = find('.coffee-item', text: @productName)
+  product = find('.coffee-item', text: @product[:productName])
   product.find('.buy-coffee').click
 end
 
 Então('devo ver a página de checkout com os detalhes do produto') do
   productTitle = find('.item-details h1')
-  expect(productTitle.text).to eq @productName
+  expect(productTitle.text).to eq @product[:productName]
 
   subPrice = find('.subtotal .sub-price')
-  expect(subPrice.text).to eq @productPrice
+  expect(subPrice.text).to eq @product[:price]
 
   delivery = find('.delivery-price')
-  expect(delivery.text).to eq @deliveryPrice
+  expect(delivery.text).to eq @product[:delivery]
 end
 
 Então('o valor total do pedido deve ser {string}') do |totalPrice|
