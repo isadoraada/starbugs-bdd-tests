@@ -16,7 +16,7 @@ Cenário: Iniciar a compra de um café
         | price          |  R$ 9,99         |
         | delivery       |  R$ 10,00        |
     Quando inicio a compra desse item 
-    Então devo ver a página de checkout com os detalhes do produto
+    Então devo ver a página de checkout com os detalhes do produto 
         E o valor total do pedido deve ser "R$ 19,99"
 
 Cenário: Café indisponível 
