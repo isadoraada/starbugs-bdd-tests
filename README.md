@@ -17,3 +17,11 @@ Esta atividade foi desenvolvida como parte do curso BDD Experience (por **Fernan
    git clone https://github.com/isadoraada/starbugs-bdd-tests
    cd starbugs-bdd-tests
    ```
+2. **Instale as dependências:**
+   ```bash
+   bundle install
+   ```
+3. **Execute os testes:**
+   ```bash
+   bundle exec cucumber
+   ```
