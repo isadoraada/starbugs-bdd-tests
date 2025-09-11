@@ -6,6 +6,7 @@ Funcionalidade: Pedidos
     Quero selecionar e comprar cafés
     Para que eu possa receber produtos no meu endereço e efetuar o pagamento na entrega
 
+    @smoke
     Cenário: Compra bem sucedida
     Dado que estou na página principal da Starbugs
         E que iniciei a compra do item "Expresso Tradicional"

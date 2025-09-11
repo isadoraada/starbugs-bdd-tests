@@ -21,7 +21,17 @@ Esta atividade foi desenvolvida como parte do curso BDD Experience (por **Fernan
    ```bash
    bundle install
    ```
-3. **Execute os testes:**
+3. **Execute todos os testes:**
    ```bash
    bundle exec cucumber
+   ```
+4. **Execute o teste que desejar:**
+   ```bash
+   //Adicione @temp no cenário que deseja executar no arquivo feature
+   bundle exec cucumber -t @temp
+   ```
+5. **Execute testes de fumaça:**
+   ```bash
+   //Adicione @smoke no cenário que deseja executar no arquivo feature
+   bundle exec cucumber -t @smoke
    ```
