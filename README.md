@@ -10,6 +10,8 @@ Esta atividade foi desenvolvida como parte do curso BDD Experience (por **Fernan
 - **Selenium WebDriver** – Driver para browsers
 - **RSpec** – Ferramenta de testes para aplicações escritas em Ruby
 
+![Evidência de teste:](docs/screenshots/4200.png)
+
 ## 🚀 Como Executar
 
 1. **Clone o repositório:**
@@ -28,10 +30,12 @@ Esta atividade foi desenvolvida como parte do curso BDD Experience (por **Fernan
 4. **Execute o teste que desejar:**
    ```bash
    //Adicione @temp no cenário que deseja executar no arquivo feature
+   
    bundle exec cucumber -t @temp
    ```
 5. **Execute testes de fumaça:**
    ```bash
    //Adicione @smoke no cenário que deseja executar no arquivo feature
+
    bundle exec cucumber -t @smoke
    ```
